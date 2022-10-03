@@ -1,5 +1,5 @@
 import './App.css';
-import React, {useState} from "react";
+import React from "react";
 import {Switch, Route} from "react-router-dom"
 import NavBar from "../NavBarFolder/NavBar.js"
 import About from "../NavBarFolder/About.js"
@@ -10,13 +10,12 @@ import Search from "../SearchFolder/Search"
 import CardContainer from "../CardContainerFolder/CardContainer"
 
 function App() {
-  const [page, setPage]=useState("/")
 
   return (
     <div className="App">
       <header className="App-header">
          <nav>
-        <NavBar onChangePage={setPage}/>
+        <NavBar />
         <Switch>
           <Route path = "/about">
             <About />
@@ -37,7 +36,6 @@ function App() {
       <div>
         <Header />
         <Search />
-        <p>Words for our app here--APP.js</p>
         <CardContainer />
       </div>
      
