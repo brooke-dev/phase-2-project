@@ -4,6 +4,7 @@ import Favorites from "./Favorites"
 import About from "./About"
 
 function NavBar(){
+    
     return(
         <div>
             <p>This is the NavBar.js component</p>
