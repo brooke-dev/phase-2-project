@@ -1,11 +1,14 @@
 import React from "react";
 
-function CardDetails(){
+function CardDetails({name,image}){
+    // console.log(name)
+    // console.log(image)
     return(
         
         <li className="card"> 
-
-        <div>Card Details.js here</div>
+            <img src={image} alt={name} />
+            <h2>{name}</h2>
+            <p>card details here</p>
         </li>
     )
 }

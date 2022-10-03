@@ -5,12 +5,9 @@ import cards from "../data/db.json" ;
 import Card from "./Card.js"
 
 function CardContainer(){
-
-
-
-    const [pokemon, setpokemon] = useState([])
-    const [magic, setmagic] = useState([])
-    const [yugioh, setyugioh] = useState([])
+    const [pokemon, setPokemon] = useState([])
+    const [magic, setMagic] = useState([])
+    const [yugioh, setYugioh] = useState([])
 
 
     const fetchData = () => {
@@ -24,30 +21,31 @@ function CardContainer(){
         
         axios.all([getPokemon, getMagic, getYugioh]).then(
             axios.spread((...allData) => {
-                const allPokemonData = allData[0]
-                const allMagicData = allData[1]
-                const allYugiohData = allData[2]
+                const allPokemonData = allData[0].data
+                const allMagicData = allData[1].data
+                const allYugiohData = allData[2].data
 
-                console.log(allPokemonData)
-                 console.log(allYugiohData)
-                 console.log(allMagicData)
-            })
+                // console.log(allPokemonData)
+                // console.log(allYugiohData)
+                // console.log(allMagicData)
+
+                setPokemon(allPokemonData)
+                // setMagic(allMagicData)
+                // setYugioh(allYugiohData)
+            })  
         )
     }
-       
+    console.log(pokemon)
 useEffect(() => {
     fetchData()
 }, []);
 
-
-
-
     return (
         <ul className="cards">
+           <Card pokemon={pokemon}/>
+            {/* <Filter pokemon={pokemon} setPokemon={setPokemon} magic={magic} setMagic={setMagic} yugioh={yugioh} setYugioh={setYugioh}/> */}
             
-            <Filter />
-            
-            <p> this is the CardContainer.js component</p>
+            <p> CardContainer</p>
         </ul>
     )
 }
