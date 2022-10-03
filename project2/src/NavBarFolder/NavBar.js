@@ -3,7 +3,7 @@ import {NavLink, Link} from "react-router-dom";
 // import Home from "./Home";
 // import Favorites from "./Favorites"
 // import About from "./About"
-import NavBarCSS from "./NavBar.css"
+// import NavBarCSS from "./NavBar.css"
 
 function NavBar(){
     return (
