@@ -1,18 +1,25 @@
 import React from "react";
-import Home from "./Home";
-import Favorites from "./Favorites"
-import About from "./About"
+import {NavLink, Link} from "react-router-dom";
+// import Home from "./Home";
+// import Favorites from "./Favorites"
+// import About from "./About"
+import NavBarCSS from "./NavBar.css"
 
 function NavBar(){
-    
-    return(
-        <div>
-            <p>This is the NavBar.js component</p>
-            <Home />
-            <Favorites />
-            <About />
-        </div>
-        
+    return (
+      <>
+        <header className="topBar"> 
+            <NavLink className="button" exact to="/home">
+                Home
+            </NavLink>
+            <NavLink className="button" to="/about">
+                About
+            </NavLink>
+            <NavLink className="button" to="/favorites">
+                Favorites
+            </NavLink>
+        </header>
+      </>
     )
 }
 

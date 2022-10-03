@@ -2,7 +2,10 @@ import React from "react";
 
 function Home(){
     return(
-        <div>This is the Home.js component</div>
+        <div>
+            <h1>Home</h1>
+            <p>this needs to render the regular app page. Ex: the cardContainer stuff</p>
+        </div>
     )
 }
 
