@@ -2,7 +2,11 @@ import React from "react";
 
 function Favorites(){
     return(
-        <div>This is the Favorites.js component</div>
+        <div>
+            <h1>Favorites</h1>
+            <h2>What cards do you love most? Find them here!</h2>
+            <p> words about favorite cards here</p>
+        </div>
     )
 }
 

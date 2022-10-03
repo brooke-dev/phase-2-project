@@ -15,13 +15,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Header />
-        <Search />
-        <p>Words for our app here--APP.js</p>
-        <CardContainer />
-      </header>
-
-      <div>
+         <nav>
         <NavBar onChangePage={setPage}/>
         <Switch>
           <Route path = "/about">
@@ -37,8 +31,17 @@ function App() {
             <h1>404 not found</h1>
           </Route>
         </Switch>
+      </nav>
+      </header>
+
+      <div>
+        <Header />
+        <Search />
+        <p>Words for our app here--APP.js</p>
+        <CardContainer />
       </div>
-       
+     
+
     </div>
   );
 }
