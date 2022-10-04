@@ -150,7 +150,7 @@ a:hover {
 /* header */
 header {
   padding: 1rem;
-  display: flex;
+  /* display: flex; */
   justify-content: space-between;
   align-content: center;
 }
@@ -321,6 +321,8 @@ nav {
   justify-content: space-between;
   align-content: center;
 }
+
+
 
 /* .navigation * {
   margin: 0 0.5rem;
