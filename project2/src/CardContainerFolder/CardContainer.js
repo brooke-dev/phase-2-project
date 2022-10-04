@@ -5,11 +5,16 @@ import Card from "./Card.js"
 
 function CardContainer({pokemon, magic,yugioh}){
     return (
+
+        <div >
+           <Card pokemon={pokemon} magic={magic} yugioh={yugioh}/>
+            {/* <Filter pokemon={pokemon} setPokemon={setPokemon} magic={magic} setMagic={setMagic} yugioh={yugioh} setYugioh={setYugioh}/> */}
+
         <ul className="cards">
             <Card pokemon={pokemon} magic={magic} yugioh={yugioh}/>
+
             
-            <p> CardContainer</p>
-        </ul>
+        </div>
     )
 }
 

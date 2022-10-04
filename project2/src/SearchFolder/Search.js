@@ -7,6 +7,7 @@ function Search({searchBar,setSearchBar,sort,setSort}){
 
 
     return (
+
         <form className="searchbar">
             <input
             type="text"
@@ -25,6 +26,7 @@ function Search({searchBar,setSearchBar,sort,setSort}){
             /> */}
             
         </form>
+
     )
 }
 
