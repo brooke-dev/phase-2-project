@@ -1,5 +1,5 @@
 import React from "react";
-import {NavLink, Link} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 // import Home from "./Home";
 // import Favorites from "./Favorites"
 // import About from "./About"
@@ -10,6 +10,7 @@ function NavBar(){
       <>
         <header className="topBar"> 
             <NavLink className="buttonHome" exact to="/home">
+
                 Home
             </NavLink>
             <NavLink className="buttonAbout" to="/about">

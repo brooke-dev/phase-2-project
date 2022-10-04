@@ -7,8 +7,6 @@ import YugiohDetails from "./YugiohDetails"
 
 function Card({pokemon,magic, yugioh, displayedCards}){
 
-    // const pokemonArray=(pokemon[0])
-    // const newArray=({...pokemonArray})
     const renderPokemonCards=pokemon.map((onePokemon)=>(
         <CardDetails 
         key={onePokemon.id}
@@ -47,7 +45,6 @@ function Card({pokemon,magic, yugioh, displayedCards}){
         // console.log(renderMagicCards)
     return (
         <div className="cards">
-        
            {renderPokemonCards}
            {renderMagicCards}
            {renderYugiohCards}
