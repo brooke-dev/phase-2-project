@@ -1,5 +1,5 @@
 
-import { render } from "@testing-library/react";
+// import { render } from "@testing-library/react";
 import React from "react";
 import CardDetails from "./CardDetails"
 import MagicDetails from "./MagicDetails"
