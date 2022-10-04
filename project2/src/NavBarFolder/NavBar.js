@@ -7,7 +7,6 @@ import {NavLink, Link} from "react-router-dom";
 
 function NavBar(){
     return (
-
       <>
         <header className="topBar"> 
             <NavLink className="buttonHome" exact to="/home">
