@@ -1,6 +1,6 @@
 // import { hasSelectionSupport } from "@testing-library/user-event/dist/utils";
 import React from "react";
-import SearchCSS from "./SearchCSS.css"
+import "./SearchCSS.css";
 
 function Search({searchBar,setSearchBar,sort,setSort}){
    
@@ -16,12 +16,12 @@ function Search({searchBar,setSearchBar,sort,setSort}){
             />
             <button type="submit">🔍</button>
 
-            {/* <label htmlFor="sort">sort by type</label>
+            <label htmlFor="sort">sort by cardtype</label>
             <input id="sort"
             type="checkbox"
             checked={sort}
             onChange={(e)=>setSort(e.target.checked)}
-            /> */}
+            />
             
         </form>
 
