@@ -165,7 +165,7 @@ a:hover {
 /* header */
 header {
   padding: 1rem;
-  display: flex;
+  /* display: flex; */
   justify-content: space-between;
   align-content: center;
 }
@@ -337,6 +337,8 @@ nav {
   align-content: center;
 }
 
+
+
 /* .navigation * {
   margin: 0 0.5rem;
 }
@@ -375,6 +377,7 @@ header h1 a:hover {
   margin: 0 auto;
 } */
 
+
 .cards {
   margin: 0 auto;
   max-width: 1000px;
@@ -397,3 +400,4 @@ header h1 a:hover {
 .about, .favs, .home{
   position:relative; top: 45px;
 }
+

@@ -7,9 +7,11 @@ import {NavLink, Link} from "react-router-dom";
 
 function NavBar(){
     return (
+
       <>
         <header className="topBar"> 
             <NavLink className="buttonHome" exact to="/home">
+
                 Home
             </NavLink>
             <NavLink className="buttonAbout" to="/about">
@@ -19,7 +21,7 @@ function NavBar(){
                 Favorites
             </NavLink>
         </header>
-      </>
+      </div>
     )
 }
 
