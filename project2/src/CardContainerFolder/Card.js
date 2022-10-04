@@ -43,6 +43,7 @@ function Card({pokemon,magic, yugioh, displayedCards}){
         // console.log(pokemonArray)
         // console.log(newArray)
         // console.log(renderMagicCards)
+        //considional rendering here for the check boxes
     return (
         <div className="cards">
            {renderPokemonCards}

@@ -2,15 +2,22 @@
 import React from "react";
 import "./SearchCSS.css";
 
-function Search({searchBar,setSearchBar,sort,setSort}){
+function Search({searchBar,setSearchBar,pokemonSort,setPokemonSort,yugiohSort,setYugiohSort,magicSort,setMagicSort}){
    function handleChangeSortBy(event){
     setSearchBar(event.target.value)
    }
 
-   function handleToggle(event){
-    setSort(event.target.checked)
+   function handlePokemonClick(event){
+    setPokemonSort(event.target.checked)
    }
 
+   function handleYugiohClick(event){
+    setYugiohSort(event.target.checked)
+   }
+
+   function handleMagicClick(event){
+    setMagicSort(event.target.checked)
+   }
 
 
     return (
@@ -25,12 +32,28 @@ function Search({searchBar,setSearchBar,sort,setSort}){
             />
             <button type="submit" className="submitButton">🔍</button>
 
-            <label htmlFor="sort">sort by cardtype</label>
+            <label htmlFor="sort">Pokemon</label>
             <input id="sort"
             type="checkbox"
-            checked={sort}
-            onChange={handleToggle}
+            checked={pokemonSort}
+            onChange={handlePokemonClick}
             />
+            
+            <label htmlFor="sort">Magic</label>
+            <input id="sort"
+            type="checkbox"
+            checked={magicSort}
+            onChange={handleMagicClick}
+            />
+
+            <label htmlFor="sort">Yu-Gi-Oh!</label>
+            <input id="sort"
+            type="checkbox"
+            checked={yugiohSort}
+            onChange={handleYugiohClick}
+            />
+
+            
             
         </form>
 
