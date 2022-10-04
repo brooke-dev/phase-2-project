@@ -30,19 +30,19 @@ function CardContainer(){
                 // console.log(allMagicData)
 
                 setPokemon(allPokemonData)
-                // setMagic(allMagicData)
-                // setYugioh(allYugiohData)
+                setMagic(allMagicData)
+                setYugioh(allYugiohData)
             })  
         )
     }
-    console.log(pokemon)
+    // console.log(pokemon)
 useEffect(() => {
     fetchData()
 }, []);
 
     return (
         <ul className="cards">
-           <Card pokemon={pokemon}/>
+           <Card pokemon={pokemon} magic={magic} yugioh={yugioh}/>
             {/* <Filter pokemon={pokemon} setPokemon={setPokemon} magic={magic} setMagic={setMagic} yugioh={yugioh} setYugioh={setYugioh}/> */}
             
             <p> CardContainer</p>

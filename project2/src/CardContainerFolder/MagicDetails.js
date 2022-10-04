@@ -1,15 +1,14 @@
 import React from "react";
 
-function CardDetails({name,image,comment}){
-    // console.log(name)
-    // console.log(image)
-    return(
+function MagicDetails({name, image, comment}){
+    return (
         <li className="card"> 
             <img src={image} alt={name} />
             <h2>{name}</h2>
             <p>{comment}</p>
         </li>
+
     )
 }
 
-export default CardDetails
+export default MagicDetails

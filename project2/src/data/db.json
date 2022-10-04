@@ -1,7 +1,5 @@
 {
     "Pokemon":[
-      {
-        "Bulbasaur":
         {
             "id":1,
             "pokedex-no": "001",
@@ -12,18 +10,18 @@
             "card-rarity": "common"
 
         },
-        "Charmander":
+       
         {
             "id":2,
             "pokedex-no": "004",
             "name": "Charmander",
             "image": "https://52f4e29a8321344e30ae-0f55c9129972ac85d6b1f4e703468e6b.ssl.cf2.rackcdn.com/products/pictures/1067789.jpg",
-            "comment": "Other Chris' favorite Gen 1 start!",
+            "comment": "!Chris' favorite Gen 1 start!",
             "pokemon-type": "Fire",
             "card-rarity": "common"
 
         },
-        "Squirtle":
+        
         {
             "id":3,
             "pokedex-no": "007",
@@ -34,11 +32,8 @@
             "card-rarity": "common"
 
         }
-      }
     ],
     "Magic-the-Gathering":[
-      {
-        "Black Lotus ":
         {
             "id":4,
             "collector-number": "0/0",
@@ -49,7 +44,6 @@
             "expansion-symbol": "common"
 
         },
-        "Jace, the Mind Sculptor ":
         {
             "id":5,
             "collector-number": "062/249",
@@ -60,7 +54,6 @@
             "expansion-symbol": "mythic"
 
         },
-        "Lightning Bolt":
         {
             "id":6,
             "collector-number": "141/249",
@@ -71,11 +64,8 @@
             "expansion-symbol": "common"
 
         }
-      }
     ],
     "Yu-Gi-Oh!":[
-        {
-        "Blue-Eyes White Dragon":
         {
             "id":7,
             "name": "Blue-Eyes White Dragon",
@@ -84,7 +74,6 @@
             "card-type": "Monster",
             "card-rarity": "common"        
         },
-        "Dark Magician":
         {
             "id":8,
             "name": "Dark Magician",
@@ -93,7 +82,6 @@
             "card-type": "Monster",
             "card-rarity": "common"        
         },
-        "Exodia The Forbidden One":
         {
             "id":9,
             "name": "Exodia The Forbidden One",
@@ -101,8 +89,6 @@
             "comment": "Nice smile- Chris Dennis",
             "card-type": "Monster",
             "card-rarity": "common"        
-        }
-
         }
     ]
 
