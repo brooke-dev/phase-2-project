@@ -1,9 +1,7 @@
 import React from "react";
 
-function CardDetails({name,image,comment}){
-    // console.log(name)
-    // console.log(image)
-    return(
+function YugiohDetails({image,name,comment}){
+    return (
         <li className="card"> 
             <img src={image} alt={name} />
             <h2>{name}</h2>
@@ -12,4 +10,4 @@ function CardDetails({name,image,comment}){
     )
 }
 
-export default CardDetails
+export default YugiohDetails
