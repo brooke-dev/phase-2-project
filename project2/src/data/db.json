@@ -2,10 +2,11 @@
     "Pokemon":[
         {
             "id":1,
+            "card-franchise":"pokemon",
             "pokedex-no": "001",
             "name": "Bulbasaur",
             "image": "https://product-images.tcgplayer.com/42387.jpg",
-            "comment": "Cj's favorite Gen 1 starer!",
+            "comment": "Cj's favorite Gen 1 starter!",
             "pokemon-type": "Grass",
             "card-rarity": "common"
 
@@ -13,10 +14,11 @@
        
         {
             "id":2,
+            "card-franchise":"pokemon",
             "pokedex-no": "004",
             "name": "Charmander",
             "image": "https://52f4e29a8321344e30ae-0f55c9129972ac85d6b1f4e703468e6b.ssl.cf2.rackcdn.com/products/pictures/1067789.jpg",
-            "comment": "!Chris' favorite Gen 1 start!",
+            "comment": "!Chris' favorite Gen 1 starter!",
             "pokemon-type": "Fire",
             "card-rarity": "common"
 
@@ -24,6 +26,7 @@
         
         {
             "id":3,
+            "card-franchise":"pokemon",
             "pokedex-no": "007",
             "name": "Squirtle",
             "image": "https://i.ebayimg.com/images/g/t9cAAOSwQglffVVe/s-l500.jpg",
@@ -35,7 +38,8 @@
     ],
     "Magic-the-Gathering":[
         {
-            "id":4,
+            "id":1,
+            "card-franchise":"magic-the-gathering",
             "collector-number": "0/0",
             "name": "Black Lotus",
             "image": "https://c1.scryfall.com/file/scryfall-cards/large/front/4/a/4a2e428c-dd25-484c-bbc8-2d6ce10ef42c.jpg?1559591808",
@@ -45,7 +49,8 @@
 
         },
         {
-            "id":5,
+            "id":2,
+            "card-franchise":"magic-the-gathering",
             "collector-number": "062/249",
             "name": "Jace, the Mind Sculptor",
             "image": "https://images.saymedia-content.com/.image/c_limit%2Ccs_srgb%2Cq_auto:eco%2Cw_620/MTc0NDYwNzc3ODAwNDEwNDcy/top-magic-the-gathering-cards-of-all-time.webp",
@@ -55,7 +60,8 @@
 
         },
         {
-            "id":6,
+            "id":3,
+            "card-franchise":"magic-the-gathering",
             "collector-number": "141/249",
             "name": "Lightning Bolt",
             "image": "https://images.saymedia-content.com/.image/c_limit%2Ccs_srgb%2Cq_auto:eco%2Cw_620/MTc0NDYwNzc3ODAyNTczMTYw/top-magic-the-gathering-cards-of-all-time.webp",
@@ -67,7 +73,8 @@
     ],
     "Yu-Gi-Oh!":[
         {
-            "id":7,
+            "id":1,
+            "card-franchise":"yu-gi-oh",
             "name": "Blue-Eyes White Dragon",
             "image": "https://i.ebayimg.com/images/g/R54AAOSwduNiCtDf/s-l500.png",
             "comment": "cool dragon- other Chris",
@@ -75,7 +82,8 @@
             "card-rarity": "common"        
         },
         {
-            "id":8,
+            "id":2,
+            "card-franchise":"yu-gi-oh",
             "name": "Dark Magician",
             "image": "https://product-images.tcgplayer.com/253907.jpg",
             "comment": "sick wizard - CJ",
@@ -83,7 +91,8 @@
             "card-rarity": "common"        
         },
         {
-            "id":9,
+            "id":3,
+            "card-franchise":"yu-gi-oh",
             "name": "Exodia The Forbidden One",
             "image": "https://ms.yugipedia.com//3/33/ExodiatheForbiddenOne-MGED-EN-PGR-1E.png",
             "comment": "Nice smile- Chris Dennis",

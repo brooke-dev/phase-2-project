@@ -14,7 +14,7 @@ function App() {
 
   const [searchBar, setSearchBar]=useState("")
   const [sort,setSort]=useState(false)
-
+  // const [showPokemon,setShowPokemon]=useState(false)
 
   const [pokemon, setPokemon] = useState([])
   const [magic, setMagic] = useState([])
@@ -65,6 +65,14 @@ function App() {
       return pokemonA.id-pokemonB.id
     }
   ): filteredPokemonCards
+
+  // const checkedPokemonBox=pokemon.filter((pokemonCards)=>(pokemon ? pokemonCards.id : true)).sort((pokemon1,pokemon2)=>{
+  //   if(sort=== "pokemon"){
+  //     return pokemon1.id-pokemon2.id
+  //   }else {
+  //     return pokemon1.id.localCompare(pokemon2.id)
+  //   }
+  // })
 
 
   const filteredMagicCards=magic.filter((oneMagicCard)=>{
@@ -123,7 +131,7 @@ function App() {
 
       <div>
         <Header />
-        <Search searchBar={searchBar} setSearchBar={setSearchBar} sort={sort} setSort={setSort}/>
+        <Search searchBar={searchBar} setSearchBar={setSearchBar} sort={sort} setSort={setSort} sortedPokemon={sortedPokemon} sortedMagic={sortedMagic} sortedYugioh={sortedYugioh}/>
         <CardContainer pokemon={sortedPokemon} magic={sortedMagic} yugioh={sortedYugioh}/>
       </div>
      
