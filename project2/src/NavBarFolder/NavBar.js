@@ -7,15 +7,17 @@ import {NavLink, Link} from "react-router-dom";
 
 function NavBar(){
     return (
-      <div>
-        <header className="justify-content-center"> 
-            <NavLink className="button" exact to="/home">
+
+      <>
+        <header className="topBar"> 
+            <NavLink className="buttonHome" exact to="/home">
+
                 Home
             </NavLink>
-            <NavLink className="button" to="/about">
+            <NavLink className="buttonAbout" to="/about">
                 About
             </NavLink>
-            <NavLink className="button" to="/favorites">
+            <NavLink className="buttonFav" to="/favorites">
                 Favorites
             </NavLink>
         </header>

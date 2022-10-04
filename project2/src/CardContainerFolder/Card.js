@@ -1,11 +1,11 @@
 
-import { render } from "@testing-library/react";
+// import { render } from "@testing-library/react";
 import React from "react";
 import CardDetails from "./CardDetails"
 import MagicDetails from "./MagicDetails"
 import YugiohDetails from "./YugiohDetails"
 
-function Card({pokemon,magic, yugioh}){
+function Card({pokemon,magic, yugioh, displayedCards}){
 
     // const pokemonArray=(pokemon[0])
     // const newArray=({...pokemonArray})
@@ -17,6 +17,7 @@ function Card({pokemon,magic, yugioh}){
         name={onePokemon.name}
         image={onePokemon.image}
         comment={onePokemon.comment}
+        displayedCards={displayedCards}
         />
     ))
 
@@ -45,8 +46,8 @@ function Card({pokemon,magic, yugioh}){
         // console.log(newArray)
         // console.log(renderMagicCards)
     return (
-        <div>
-            <p>CardComponent here</p>
+        <div className="cards">
+        
            {renderPokemonCards}
            {renderMagicCards}
            {renderYugiohCards}
