@@ -1,11 +1,9 @@
-import { hasSelectionSupport } from "@testing-library/user-event/dist/utils";
+// import { hasSelectionSupport } from "@testing-library/user-event/dist/utils";
 import React from "react";
 import SearchCSS from "./SearchCSS.css"
 
 function Search({searchBar,setSearchBar,sort,setSort}){
    
-
-
     return (
 
         <form className="searchbar">
