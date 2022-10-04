@@ -11,6 +11,7 @@ import Search from "../SearchFolder/Search"
 import CardContainer from "../CardContainerFolder/CardContainer"
 
 function App() {
+
   const [searchBar, setSearchBar]=useState("")
   const [sort,setSort]=useState(false)
 
@@ -97,7 +98,6 @@ function App() {
       return yugiohA.id-yugiohB.id
     }
   ): filteredYugiohCards
-
 
   return (
     <div className="App">
