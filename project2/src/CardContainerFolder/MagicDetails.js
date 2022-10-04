@@ -3,8 +3,8 @@ import React from "react";
 function MagicDetails({name, image, comment}){
     return (
         <li className="card"> 
-            <img src={image} alt={name} />
             <h2>{name}</h2>
+            <img src={image} alt={name} />
             <p>{comment}</p>
         </li>
 
