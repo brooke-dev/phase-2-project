@@ -23,7 +23,7 @@ function Search({searchBar,setSearchBar,sort,setSort}){
             value={searchBar}
             onChange={handleChangeSortBy}
             />
-            <button type="submit">🔍</button>
+            <button type="submit" className="submitButton">🔍</button>
 
             <label htmlFor="sort">sort by cardtype</label>
             <input id="sort"
