@@ -1,9 +1,9 @@
 import React from "react";
-import HeaderCSS from "./Header"
+import "./Header"
 
 function Header(){
     return (
-        <p></p>
+        <h1>Welcome to the ultimate card collectors sorting app!</h1>
     )
 }
 

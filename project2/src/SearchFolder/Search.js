@@ -3,7 +3,16 @@ import React from "react";
 import "./SearchCSS.css";
 
 function Search({searchBar,setSearchBar,sort,setSort}){
-   
+   function handleChangeSortBy(event){
+    setSearchBar(event.target.value)
+   }
+
+   function handleToggle(event){
+    setSort(event.target.checked)
+   }
+
+
+
     return (
 
         <form className="searchbar">
@@ -12,7 +21,7 @@ function Search({searchBar,setSearchBar,sort,setSort}){
             id="search"
             placeholder="search cards here!"
             value={searchBar}
-            onChange={(e)=>setSearchBar(e.target.value)}
+            onChange={handleChangeSortBy}
             />
             <button type="submit">🔍</button>
 
@@ -20,7 +29,7 @@ function Search({searchBar,setSearchBar,sort,setSort}){
             <input id="sort"
             type="checkbox"
             checked={sort}
-            onChange={(e)=>setSort(e.target.checked)}
+            onChange={handleToggle}
             />
             
         </form>
