@@ -8,7 +8,12 @@ function CardContainer(){
     const [pokemon, setPokemon] = useState([])
     const [magic, setMagic] = useState([])
     const [yugioh, setYugioh] = useState([])
+    // const [search, setSearch]=useState("")
 
+    // const displayedCards=pokemon.filter((onePokemonCard)=>
+    // pokemon.name.toLowerCase().includes(search.toLowerCase())
+    // );
+   
 
     const fetchData = () => {
         const pokemonUrl = "http://localhost:4000/Pokemon"
@@ -40,10 +45,10 @@ useEffect(() => {
     fetchData()
 }, []);
 
+
     return (
         <ul className="cards">
-           <Card pokemon={pokemon} magic={magic} yugioh={yugioh}/>
-            {/* <Filter pokemon={pokemon} setPokemon={setPokemon} magic={magic} setMagic={setMagic} yugioh={yugioh} setYugioh={setYugioh}/> */}
+            <Card pokemon={pokemon} magic={magic} yugioh={yugioh}/>
             
             <p> CardContainer</p>
         </ul>

@@ -10,6 +10,15 @@ import Search from "../SearchFolder/Search"
 import CardContainer from "../CardContainerFolder/CardContainer"
 
 function App() {
+  // const [cards,setCards]= useState([])
+  // const [search, setSearch]=useState("")
+
+  // const displayedCards=cards.filter((oneSingleCard)=>
+  //   cards.name.toLowerCase().includes(search.toLowerCase())
+  // );
+
+
+
 
   return (
     <div className="App">
@@ -35,8 +44,8 @@ function App() {
 
       <div>
         <Header />
-        <Search />
-        <CardContainer />
+        <Search/>
+        <CardContainer/>
       </div>
      
 
