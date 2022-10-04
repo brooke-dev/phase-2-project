@@ -9,13 +9,13 @@ function NavBar(){
     return (
       <>
         <header className="topBar"> 
-            <NavLink className="button" exact to="/home">
+            <NavLink className="buttonHome" exact to="/home">
                 Home
             </NavLink>
-            <NavLink className="button" to="/about">
+            <NavLink className="buttonAbout" to="/about">
                 About
             </NavLink>
-            <NavLink className="button" to="/favorites">
+            <NavLink className="buttonFav" to="/favorites">
                 Favorites
             </NavLink>
         </header>

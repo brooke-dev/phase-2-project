@@ -44,8 +44,8 @@ function Card({pokemon,magic, yugioh}){
         // console.log(newArray)
         // console.log(renderMagicCards)
     return (
-        <div>
-            <p>CardComponent here</p>
+        <div className="cards">
+        
            {renderPokemonCards}
            {renderMagicCards}
            {renderYugiohCards}

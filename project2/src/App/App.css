@@ -85,7 +85,7 @@ section {
 }
 
 /* buttons */
-button, .button {
+button, .buttonHome, .buttonAbout, .buttonFav {
   appearance: auto;
   padding: 0.5rem 0.75rem;
   border: none;
@@ -97,6 +97,7 @@ button, .button {
   background-color: var(--background);
   border: 2px solid var(--dark-turquoise);
   transition: background-color 0.2s;
+  position:absolute;
 }
 
 button.active,
@@ -133,6 +134,20 @@ button.blue:hover,
   color: var(--white);
   background-color: var(--blue);
   border: 2px solid var(--blue);
+}
+
+.buttonHome{
+  position:absolute;
+}
+
+.buttonAbout{
+  position:absolute;
+  left:22%
+}
+
+.buttonFav{
+  position:absolute;
+  right:50%
 }
 
 /* links */
@@ -214,7 +229,7 @@ select:focus {
 }
 
 /* cards */
-.cards {
+/*.cards {
   margin: 0 auto;
   list-style: none;
   width: 100%;
@@ -292,7 +307,7 @@ select:focus {
   display: flex;
   justify-content: space-between;
 }
-
+*/
 .manage .button, .manage button {
   margin-left: 0.25em;
 }
@@ -359,3 +374,26 @@ header h1 a:hover {
   max-width: 800px;
   margin: 0 auto;
 } */
+
+.cards {
+  margin: 0 auto;
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: repeat(3, 333px);
+  gap: 20px;
+  position: relative; top: 50px;
+}
+
+.card__image {
+  width:100%;
+  display: block;
+
+}
+
+.card {
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+.about, .favs, .home{
+  position:relative; top: 45px;
+}

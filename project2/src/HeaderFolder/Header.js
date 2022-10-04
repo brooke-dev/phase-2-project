@@ -3,7 +3,7 @@ import HeaderCSS from "./Header"
 
 function Header(){
     return (
-        <p>Header</p>
+        <p></p>
     )
 }
 

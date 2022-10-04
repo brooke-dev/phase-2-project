@@ -41,12 +41,11 @@ useEffect(() => {
 }, []);
 
     return (
-        <ul className="cards">
+        <div >
            <Card pokemon={pokemon} magic={magic} yugioh={yugioh}/>
             {/* <Filter pokemon={pokemon} setPokemon={setPokemon} magic={magic} setMagic={setMagic} yugioh={yugioh} setYugioh={setYugioh}/> */}
             
-            <p> CardContainer</p>
-        </ul>
+        </div>
     )
 }
 
