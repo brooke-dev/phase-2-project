@@ -10,7 +10,6 @@ import Search from "../SearchFolder/Search"
 import CardContainer from "../CardContainerFolder/CardContainer"
 
 function App() {
-
   return (
     <div className="App">
       <header className="App-header">
