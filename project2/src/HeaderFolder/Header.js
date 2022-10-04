@@ -3,7 +3,7 @@ import HeaderCSS from "./Header"
 
 function Header(){
     return (
-        <p>This is the Header.js component</p>
+        <p>Header</p>
     )
 }
 

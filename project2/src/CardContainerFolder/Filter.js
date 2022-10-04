@@ -1,11 +1,10 @@
 import React from "react";
 import Card from "./Card";
 
-function Filter(){
+function Filter({pokemon,setPokemon,magic,setMagic,yugioh, setYugioh}){
     return(
         <div>
-            <Card />
-            <p>This is the Filter.js Component</p>
+            <Card pokemon={pokemon} magic={magic} yugioh={yugioh}/>
         </div>
     )
 }
