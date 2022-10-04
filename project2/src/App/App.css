@@ -397,3 +397,11 @@ header h1 a:hover {
 .about, .favs, .home{
   position:relative; top: 45px;
 }
+
+.searchbar{
+  position: absolute; top: 200px; left: 30px; 
+}
+
+.submitButton{
+  position: absolute; left: 200px; top: 8px
+}

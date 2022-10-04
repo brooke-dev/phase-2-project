@@ -14,7 +14,7 @@ function Search({searchBar,setSearchBar,sort,setSort}){
             value={searchBar}
             onChange={(e)=>setSearchBar(e.target.value)}
             />
-            <button type="submit">🔍</button>
+            <button type="submit" className="submitButton">🔍</button>
 
             {/* <label htmlFor="sort">sort by type</label>
             <input id="sort"
