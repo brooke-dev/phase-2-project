@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function NewCardForm({handleAddCard}) {
+function NewCardForm( {handleAddCard} ) {
   const [cardName, setCardName] = useState("")
   const [cardImage, setCardImage] = useState("")
   const [cardComment, setCardComment] = useState("")
@@ -9,8 +9,20 @@ function NewCardForm({handleAddCard}) {
 
   function handleSubmit(e) {
     e.preventDefault()
-    handleAddCard(e)
-  }
+    fetch("http://localhost:4000/Pokemon", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+    },
+        body: JSON.stringify({
+            name: cardName,
+            image: cardImage,
+            comment: cardComment,
+        })
+  })
+  .then(r => r.json())
+  .then((newPokemonCard) => handleAddCard(newPokemonCard))
+}
   return (
     <div className="new-card-form">
       <h2>New Card</h2>
