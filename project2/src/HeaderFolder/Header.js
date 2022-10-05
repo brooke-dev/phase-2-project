@@ -3,7 +3,7 @@ import "./Header"
 
 function Header(){
     return (
-        <h1>Welcome to the ultimate card collectors sorting app!</h1>
+        <h1></h1>
     )
 }
 

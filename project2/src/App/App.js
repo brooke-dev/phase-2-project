@@ -9,6 +9,7 @@ import Home from "../NavBarFolder/Home"
 import Header from "../HeaderFolder/Header"
 import Search from "../SearchFolder/Search"
 import CardContainer from "../CardContainerFolder/CardContainer"
+import NewCardForm from './NewCardForm';
 
 function App() {
 
@@ -118,15 +119,11 @@ function App() {
   ): filteredYugiohCards
 
 
-  // const [renderCards,setRenderCards]=useState(true)
+// function handleAddCard(newPokemonCard) {
+//   const newPokeArray = [...sortedPokemon, newPokemonCard]
+//   setPokemon(newPokeArray)
+// }
 
-  // function checkboxRenderCardsFunction(){
-  //   const allCards=[pokemonSort,yugiohSort,magicSort]
-  //   setRenderCards ? renderCards : !allCards
-    
-  // }
-// const allCards=[pokemonSort,yugiohSort,magicSort]
-// console.log(allCards)
 
   return (
     <div className="App">
@@ -151,7 +148,14 @@ function App() {
       </header>
 
       <div>
+      <CardContainer pokemon={sortedPokemon} magic={sortedMagic} yugioh={sortedYugioh}/>
         <Header />
+
+        <Search searchBar={searchBar} setSearchBar={setSearchBar} sort={sort} setSort={setSort} sortedPokemon={sortedPokemon} sortedMagic={sortedMagic} sortedYugioh={sortedYugioh}/>
+        <NewCardForm handleAddCard={handleAddCard}/>
+        
+        
+
         <Search 
           searchBar={searchBar} 
           setSearchBar={setSearchBar} 
@@ -177,6 +181,7 @@ function App() {
         magic={sortedMagic} 
         yugioh={sortedYugioh}
         />
+
       </div>
      
 
