@@ -119,10 +119,10 @@ function App() {
   ): filteredYugiohCards
 
 
-// function handleAddCard(newPokemonCard) {
-//   const newPokeArray = [...sortedPokemon, newPokemonCard]
-//   setPokemon(newPokeArray)
-// }
+function handleAddCard(newPokemonCard) {
+  const newPokeArray = [...sortedPokemon, newPokemonCard]
+  setPokemon(newPokeArray)
+}
 
 
   return (
@@ -151,11 +151,8 @@ function App() {
       <CardContainer pokemon={sortedPokemon} magic={sortedMagic} yugioh={sortedYugioh}/>
         <Header />
 
-        <Search searchBar={searchBar} setSearchBar={setSearchBar} sort={sort} setSort={setSort} sortedPokemon={sortedPokemon} sortedMagic={sortedMagic} sortedYugioh={sortedYugioh}/>
         <NewCardForm handleAddCard={handleAddCard}/>
         
-        
-
         <Search 
           searchBar={searchBar} 
           setSearchBar={setSearchBar} 
