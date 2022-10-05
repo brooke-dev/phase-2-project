@@ -9,6 +9,7 @@ import Home from "../NavBarFolder/Home"
 import Header from "../HeaderFolder/Header"
 import Search from "../SearchFolder/Search"
 import CardContainer from "../CardContainerFolder/CardContainer"
+import NewCardForm from './NewCardForm';
 
 function App() {
 
@@ -107,6 +108,11 @@ function App() {
     }
   ): filteredYugiohCards
 
+// function handleAddCard(newPokemonCard) {
+//   const newPokeArray = [...sortedPokemon, newPokemonCard]
+//   setPokemon(newPokeArray)
+// }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -130,9 +136,12 @@ function App() {
       </header>
 
       <div>
+      <CardContainer pokemon={sortedPokemon} magic={sortedMagic} yugioh={sortedYugioh}/>
         <Header />
         <Search searchBar={searchBar} setSearchBar={setSearchBar} sort={sort} setSort={setSort} sortedPokemon={sortedPokemon} sortedMagic={sortedMagic} sortedYugioh={sortedYugioh}/>
-        <CardContainer pokemon={sortedPokemon} magic={sortedMagic} yugioh={sortedYugioh}/>
+        <NewCardForm handleAddCard={handleAddCard}/>
+        
+        
       </div>
      
 
