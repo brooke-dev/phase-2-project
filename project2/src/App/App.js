@@ -16,16 +16,15 @@ function App() {
   const [pokemonSort,setPokemonSort]=useState(false)
   const [magicSort,setMagicSort]=useState(false)
   const [yugiohSort,setYugiohSort]=useState(false)
-  // const [checkPokemon,setCheckPokemon]=useState(false)
-  // const [checkYugioh, setCheckYugioh]=useState(false)
-  // const [checkMagic,setCheckMagic]=useState(false)
 
-
-
+  const [renderCheckedPokemonCards,setRenderCheckedPokemonCards]=useState(false)
+  const [renderCheckedMagicCards, setRenderCheckedMagicCards]=useState(false)
+  const [renderCheckedYugiohCards,setRenderCheckedYugiohCards]=useState (false)
 
   const [pokemon, setPokemon] = useState([])
   const [magic, setMagic] = useState([])
   const [yugioh, setYugioh] = useState([])
+
 
   const fetchData = () => {
       const pokemonUrl = "http://localhost:4000/Pokemon"
@@ -67,9 +66,13 @@ function App() {
     }
   })
 
+
   const sortedPokemon= pokemonSort ? [...filteredPokemonCards].sort(
     (pokemonA,pokemonB)=>{
-      return pokemonB.id-pokemonA.id
+      return (
+        pokemonB["pokedex-no"]-pokemonA["pokedex-no"]
+      )
+      
     }
   ): filteredPokemonCards
 
@@ -114,6 +117,17 @@ function App() {
     }
   ): filteredYugiohCards
 
+
+  // const [renderCards,setRenderCards]=useState(true)
+
+  // function checkboxRenderCardsFunction(){
+  //   const allCards=[pokemonSort,yugiohSort,magicSort]
+  //   setRenderCards ? renderCards : !allCards
+    
+  // }
+// const allCards=[pokemonSort,yugiohSort,magicSort]
+// console.log(allCards)
+
   return (
     <div className="App">
       <header className="App-header">
@@ -147,9 +161,22 @@ function App() {
           setMagicSort={setMagicSort}
           yugiohSort={yugiohSort}
           setYugiohSort={setYugiohSort}
+          renderCheckedPokemonCards={renderCheckedPokemonCards}
+          setRenderCheckedPokemonCards={setRenderCheckedPokemonCards}
+          renderCheckedMagicCards={renderCheckedMagicCards}
+          setRenderCheckedMagicCards={setRenderCheckedMagicCards}
+          renderCheckedYugiohCards={renderCheckedYugiohCards}
+          setRenderCheckedYugiohCards={setRenderCheckedYugiohCards}
          
           />
-        <CardContainer pokemon={sortedPokemon} magic={sortedMagic} yugioh={sortedYugioh}/>
+        <CardContainer 
+        renderCheckedPokemonCards={renderCheckedPokemonCards} 
+        renderCheckedMagicCards={renderCheckedMagicCards}
+        renderCheckedYugiohCards={renderCheckedYugiohCards}
+        pokemon={sortedPokemon} 
+        magic={sortedMagic} 
+        yugioh={sortedYugioh}
+        />
       </div>
      
 

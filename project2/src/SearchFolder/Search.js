@@ -2,25 +2,43 @@
 import React from "react";
 import "./SearchCSS.css";
 
-function Search({searchBar,setSearchBar,pokemonSort,setPokemonSort,yugiohSort,setYugiohSort,magicSort,setMagicSort}){
+function Search({setRenderCheckedPokemonCards,
+    renderCheckedPokemonCards,
+    setRenderCheckedMagicCards,
+    renderCheckedMagicCards,
+    setRenderCheckedYugiohCards,
+    renderCheckedYugiohCards,
+    searchBar,
+    setSearchBar,
+    pokemonSort,
+    setPokemonSort,
+    yugiohSort,
+    setYugiohSort,
+    magicSort,
+    setMagicSort}){
    function handleChangeSortBy(event){
     setSearchBar(event.target.value)
    }
 
    function handlePokemonClick(event){
-    setPokemonSort(event.target.checked)
+    setRenderCheckedPokemonCards(event.target.checked)
    }
 
    function handleYugiohClick(event){
-    setYugiohSort(event.target.checked)
+    setRenderCheckedYugiohCards(event.target.checked)
    }
 
    function handleMagicClick(event){
-    setMagicSort(event.target.checked)
+    setRenderCheckedMagicCards(event.target.checked)
+   }
+
+   function handlePokedexClick(event){
+    setPokemonSort(event.target.checked)
    }
 
 
     return (
+        <div>
 
         <form className="searchbar">
             <input
@@ -35,27 +53,34 @@ function Search({searchBar,setSearchBar,pokemonSort,setPokemonSort,yugiohSort,se
             <label htmlFor="sort">Pokemon</label>
             <input id="sort"
             type="checkbox"
-            checked={pokemonSort}
+            checked={renderCheckedPokemonCards}
             onChange={handlePokemonClick}
             />
             
             <label htmlFor="sort">Magic</label>
             <input id="sort"
             type="checkbox"
-            checked={magicSort}
+            checked={renderCheckedMagicCards}
             onChange={handleMagicClick}
             />
 
             <label htmlFor="sort">Yu-Gi-Oh!</label>
             <input id="sort"
             type="checkbox"
-            checked={yugiohSort}
+            checked={renderCheckedYugiohCards}
             onChange={handleYugiohClick}
-            />
-
-            
-            
+            />            
         </form>
+        <form className="pokedex">
+            <label htmlFor="sort">Pokedex Number!</label>
+                <input id="sort"
+                type="checkbox"
+                checked={pokemonSort}
+                onChange={handlePokedexClick}
+                />
+        </form>
+
+        </div>
 
     )
 }
