@@ -5,7 +5,15 @@ import CardDetails from "./CardDetails"
 import MagicDetails from "./MagicDetails"
 import YugiohDetails from "./YugiohDetails"
 
-function Card({pokemon,magic, yugioh, displayedCards}){
+function Card({pokemon,
+    magic, 
+    yugioh, 
+    displayedCards, 
+    renderCheckedPokemonCards,
+    renderCheckedYugiohCards,
+    renderCheckedMagicCards,
+}){
+
 
     const renderPokemonCards=pokemon.map((onePokemon)=>(
         <CardDetails 
@@ -43,11 +51,13 @@ function Card({pokemon,magic, yugioh, displayedCards}){
         // console.log(pokemonArray)
         // console.log(newArray)
         // console.log(renderMagicCards)
+        //considional rendering here for the check boxes
+        
     return (
         <div className="cards">
-           {renderPokemonCards}
-           {renderMagicCards}
-           {renderYugiohCards}
+           {renderCheckedPokemonCards ? renderPokemonCards : null}
+           {renderCheckedMagicCards ? renderMagicCards : null}
+           {renderCheckedYugiohCards ? renderYugiohCards: null}
         </div>
         
     )

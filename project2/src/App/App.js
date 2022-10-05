@@ -14,12 +14,18 @@ import NewCardForm from './NewCardForm';
 function App() {
 
   const [searchBar, setSearchBar]=useState("")
-  const [sort,setSort]=useState(false)
-  // const [showPokemon,setShowPokemon]=useState(false)
+  const [pokemonSort,setPokemonSort]=useState(false)
+  const [magicSort,setMagicSort]=useState(false)
+  const [yugiohSort,setYugiohSort]=useState(false)
+
+  const [renderCheckedPokemonCards,setRenderCheckedPokemonCards]=useState(false)
+  const [renderCheckedMagicCards, setRenderCheckedMagicCards]=useState(false)
+  const [renderCheckedYugiohCards,setRenderCheckedYugiohCards]=useState (false)
 
   const [pokemon, setPokemon] = useState([])
   const [magic, setMagic] = useState([])
   const [yugioh, setYugioh] = useState([])
+
 
   const fetchData = () => {
       const pokemonUrl = "http://localhost:4000/Pokemon"
@@ -61,17 +67,21 @@ function App() {
     }
   })
 
-  const sortedPokemon= sort ? [...filteredPokemonCards].sort(
+
+  const sortedPokemon= pokemonSort ? [...filteredPokemonCards].sort(
     (pokemonA,pokemonB)=>{
-      return pokemonA.id-pokemonB.id
+      return (
+        pokemonB["pokedex-no"]-pokemonA["pokedex-no"]
+      )
+      
     }
   ): filteredPokemonCards
 
-  // const checkedPokemonBox=pokemon.filter((pokemonCards)=>(pokemon ? pokemonCards.id : true)).sort((pokemon1,pokemon2)=>{
-  //   if(sort=== "pokemon"){
+  // const checkedPokemonBox=pokemon.filter((pokemonCards)=>(pokemon ? (pokemonCards['card-franchise']) : true)).sort((pokemon1,pokemon2)=>{
+  //   if(sort === "pokemon"){
   //     return pokemon1.id-pokemon2.id
   //   }else {
-  //     return pokemon1.id.localCompare(pokemon2.id)
+  //     return pokemon1.name.localCompare(pokemon2.name)
   //   }
   // })
 
@@ -86,9 +96,9 @@ function App() {
     }
   })
 
-  const sortedMagic= sort ? [...filteredMagicCards].sort(
+  const sortedMagic= magicSort ? [...filteredMagicCards].sort(
     (magicA,magicB)=>{
-      return magicA.id-magicB.id
+      return magicB.id-magicA.id
     }
   ): filteredMagicCards
 
@@ -102,16 +112,18 @@ function App() {
     }
   })
 
-  const sortedYugioh= sort ? [...filteredYugiohCards].sort(
+  const sortedYugioh= yugiohSort ? [...filteredYugiohCards].sort(
     (yugiohA,yugiohB)=>{
-      return yugiohA.id-yugiohB.id
+      return yugiohB.id-yugiohA.id
     }
   ): filteredYugiohCards
+
 
 // function handleAddCard(newPokemonCard) {
 //   const newPokeArray = [...sortedPokemon, newPokemonCard]
 //   setPokemon(newPokeArray)
 // }
+
 
   return (
     <div className="App">
@@ -138,10 +150,38 @@ function App() {
       <div>
       <CardContainer pokemon={sortedPokemon} magic={sortedMagic} yugioh={sortedYugioh}/>
         <Header />
+
         <Search searchBar={searchBar} setSearchBar={setSearchBar} sort={sort} setSort={setSort} sortedPokemon={sortedPokemon} sortedMagic={sortedMagic} sortedYugioh={sortedYugioh}/>
         <NewCardForm handleAddCard={handleAddCard}/>
         
         
+
+        <Search 
+          searchBar={searchBar} 
+          setSearchBar={setSearchBar} 
+          pokemonSort={pokemonSort}
+          setPokemonSort={setPokemonSort}
+          magicSort={magicSort}
+          setMagicSort={setMagicSort}
+          yugiohSort={yugiohSort}
+          setYugiohSort={setYugiohSort}
+          renderCheckedPokemonCards={renderCheckedPokemonCards}
+          setRenderCheckedPokemonCards={setRenderCheckedPokemonCards}
+          renderCheckedMagicCards={renderCheckedMagicCards}
+          setRenderCheckedMagicCards={setRenderCheckedMagicCards}
+          renderCheckedYugiohCards={renderCheckedYugiohCards}
+          setRenderCheckedYugiohCards={setRenderCheckedYugiohCards}
+         
+          />
+        <CardContainer 
+        renderCheckedPokemonCards={renderCheckedPokemonCards} 
+        renderCheckedMagicCards={renderCheckedMagicCards}
+        renderCheckedYugiohCards={renderCheckedYugiohCards}
+        pokemon={sortedPokemon} 
+        magic={sortedMagic} 
+        yugioh={sortedYugioh}
+        />
+
       </div>
      
 
