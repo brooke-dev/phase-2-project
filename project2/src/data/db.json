@@ -41,6 +41,18 @@
       "image": "lord",
       "comment": "help",
       "id": 5
+    },
+    {
+      "name": "please",
+      "image": "lord",
+      "comment": "help",
+      "id": 6
+    },
+    {
+      "name": "",
+      "image": "",
+      "comment": "",
+      "id": 7
     }
   ],
   "Magic-the-Gathering": [
